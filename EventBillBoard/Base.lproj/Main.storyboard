@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rDD-V1-r5j">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--最新活动-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="shouye" customModule="EventBillBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ4-hP-Hxp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Pz5-vW-ujU"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-j9-e5G">
+                                <rect key="frame" x="178" y="267" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JQ4-hP-Hxp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K8l-ZI-hzJ"/>
+                            <constraint firstAttribute="trailing" secondItem="JQ4-hP-Hxp" secondAttribute="trailing" id="Qru-Zw-dxd"/>
+                            <constraint firstItem="JQ4-hP-Hxp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TcF-p3-k7y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JQ4-hP-Hxp" secondAttribute="bottom" id="rgE-xp-PuX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="最新活动" id="fVB-q9-D7B"/>
+                    <connections>
+                        <outlet property="jiazai" destination="ZEM-j9-e5G" id="vRA-zB-Qot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="776.76161919040487"/>
+        </scene>
+        <!--秘密花园-->
+        <scene sceneID="wTL-m1-feZ">
+            <objects>
+                <navigationController id="Ke9-X0-l6C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="秘密花园" image="秘密花园" id="nNl-Gj-ACK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="C6M-f9-NjO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VHF-qm-nNR" kind="relationship" relationship="rootViewController" id="YDF-uH-TCo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4E-ZA-g3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="1532"/>
+        </scene>
+        <!--秘密花园-->
+        <scene sceneID="EnB-2p-ijb">
+            <objects>
+                <viewController id="VHF-qm-nNR" customClass="mimihuayuan" customModule="EventBillBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vxc-EB-iy9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tcf-KI-9zI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OY0-bB-h3M">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5C-s4-UEp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VHF-qm-nNR" id="25V-fY-e4u"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zkm-IZ-UfG">
+                                <rect key="frame" x="177" y="267" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C5C-s4-UEp" firstAttribute="centerY" secondItem="OY0-bB-h3M" secondAttribute="centerY" id="28F-0R-a9j"/>
+                            <constraint firstItem="Zkm-IZ-UfG" firstAttribute="centerY" secondItem="OY0-bB-h3M" secondAttribute="centerY" id="LDi-cp-zz2"/>
+                            <constraint firstItem="C5C-s4-UEp" firstAttribute="width" secondItem="OY0-bB-h3M" secondAttribute="width" id="bFs-hr-5fr"/>
+                            <constraint firstItem="C5C-s4-UEp" firstAttribute="height" secondItem="OY0-bB-h3M" secondAttribute="height" id="lKd-t2-XZY"/>
+                            <constraint firstItem="C5C-s4-UEp" firstAttribute="centerX" secondItem="OY0-bB-h3M" secondAttribute="centerX" id="szb-Kv-UmS"/>
+                            <constraint firstItem="Zkm-IZ-UfG" firstAttribute="centerX" secondItem="OY0-bB-h3M" secondAttribute="centerX" id="xVx-iF-EZU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="秘密花园" id="yzV-xd-3Sb"/>
+                    <connections>
+                        <outlet property="jiazai" destination="Zkm-IZ-UfG" id="vQl-AU-Vjb"/>
+                        <outlet property="webview" destination="C5C-s4-UEp" id="Wxc-oF-Be1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21F-0n-m6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815" y="1531"/>
+        </scene>
+        <!--山居秘境-->
+        <scene sceneID="xmv-vb-5MF">
+            <objects>
+                <navigationController id="dnh-GX-2P8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="山居秘境" image="山居秘境" id="TBm-Be-GIu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DMS-gG-bVN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QM4-FH-4zk" kind="relationship" relationship="rootViewController" id="6Hw-nc-Rra"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwg-DS-cVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="2337"/>
+        </scene>
+        <!--山居秘境-->
+        <scene sceneID="ih4-1V-dgC">
+            <objects>
+                <viewController id="QM4-FH-4zk" customClass="shanju" customModule="EventBillBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MEW-Zi-OL5"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Oc-YF-IJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ieU-lc-3aQ">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqW-aC-3tU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QM4-FH-4zk" id="fFp-2Y-kZs"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bnQ-SY-pVE">
+                                <rect key="frame" x="177" y="267" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MqW-aC-3tU" firstAttribute="width" secondItem="ieU-lc-3aQ" secondAttribute="width" id="01W-S6-zSo"/>
+                            <constraint firstItem="MqW-aC-3tU" firstAttribute="centerY" secondItem="ieU-lc-3aQ" secondAttribute="centerY" id="CgF-KX-Tmm"/>
+                            <constraint firstItem="MqW-aC-3tU" firstAttribute="height" secondItem="ieU-lc-3aQ" secondAttribute="height" id="Huj-dT-oI5"/>
+                            <constraint firstItem="MqW-aC-3tU" firstAttribute="centerX" secondItem="ieU-lc-3aQ" secondAttribute="centerX" id="cez-kU-cSY"/>
+                            <constraint firstItem="bnQ-SY-pVE" firstAttribute="centerX" secondItem="ieU-lc-3aQ" secondAttribute="centerX" id="gi0-F7-NCo"/>
+                            <constraint firstItem="bnQ-SY-pVE" firstAttribute="centerY" secondItem="ieU-lc-3aQ" secondAttribute="centerY" id="h85-9g-d6F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="山居秘境" id="kK3-2z-Msj"/>
+                    <connections>
+                        <outlet property="jiazai" destination="bnQ-SY-pVE" id="z5C-3S-6OZ"/>
+                        <outlet property="webview" destination="MqW-aC-3tU" id="sxO-6y-wL9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65F-HX-ciX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="2337"/>
+        </scene>
+        <!--城事-->
+        <scene sceneID="6ZA-xS-IJd">
+            <objects>
+                <navigationController id="ZEI-hH-yk9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="城事" image="城事" id="oSL-cT-zCB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Uc0-vB-fGB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d4k-cw-b5o" kind="relationship" relationship="rootViewController" id="yVu-Hn-dSC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Iu-pI-iig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="3083"/>
+        </scene>
+        <!--城事-->
+        <scene sceneID="c8c-l0-Xvw">
+            <objects>
+                <viewController id="d4k-cw-b5o" customClass="chengshi" customModule="EventBillBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cp2-0V-Y8H"/>
+                        <viewControllerLayoutGuide type="bottom" id="t0K-oE-3gW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dux-CB-ilZ">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gnz-SZ-FbF">
+                                <rect key="frame" x="177" y="267" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRz-sj-2eY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="d4k-cw-b5o" id="H1Z-Io-rhO"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gnz-SZ-FbF" firstAttribute="centerX" secondItem="dux-CB-ilZ" secondAttribute="centerX" id="25b-7n-dkQ"/>
+                            <constraint firstItem="gnz-SZ-FbF" firstAttribute="centerY" secondItem="dux-CB-ilZ" secondAttribute="centerY" id="MCW-0f-4Lm"/>
+                            <constraint firstItem="gnz-SZ-FbF" firstAttribute="centerY" secondItem="dux-CB-ilZ" secondAttribute="centerY" id="NS7-uu-Txg"/>
+                            <constraint firstItem="gnz-SZ-FbF" firstAttribute="centerY" secondItem="dux-CB-ilZ" secondAttribute="centerY" id="OGD-dB-mgR"/>
+                            <constraint firstItem="hRz-sj-2eY" firstAttribute="centerX" secondItem="dux-CB-ilZ" secondAttribute="centerX" id="Oz8-8V-dQS"/>
+                            <constraint firstItem="hRz-sj-2eY" firstAttribute="height" secondItem="dux-CB-ilZ" secondAttribute="height" id="QCk-zo-O3A"/>
+                            <constraint firstItem="hRz-sj-2eY" firstAttribute="centerY" secondItem="dux-CB-ilZ" secondAttribute="centerY" id="a01-uj-6L6"/>
+                            <constraint firstItem="gnz-SZ-FbF" firstAttribute="centerX" secondItem="dux-CB-ilZ" secondAttribute="centerX" id="asy-hx-i3e"/>
+                            <constraint firstItem="hRz-sj-2eY" firstAttribute="width" secondItem="dux-CB-ilZ" secondAttribute="width" id="tUA-5F-vZk"/>
+                            <constraint firstItem="gnz-SZ-FbF" firstAttribute="centerX" secondItem="dux-CB-ilZ" secondAttribute="centerX" id="y98-et-S3k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="城事" id="xfP-gX-sla"/>
+                    <connections>
+                        <outlet property="jiazai" destination="gnz-SZ-FbF" id="x67-p4-wtJ"/>
+                        <outlet property="webview" destination="hRz-sj-2eY" id="2vI-sf-CjP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOa-T5-vb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="3082"/>
+        </scene>
+        <!--生活家-->
+        <scene sceneID="Cw2-2T-MYH">
+            <objects>
+                <navigationController id="i83-3C-1Pm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="生活家" image="生活家" id="fYn-Vg-ZWr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Drm-Gi-833">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XlX-XB-aaF" kind="relationship" relationship="rootViewController" id="AGZ-Yw-hNH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1c-85-BG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="3787"/>
+        </scene>
+        <!--城市生活家-->
+        <scene sceneID="0M5-C7-Qns">
+            <objects>
+                <viewController id="XlX-XB-aaF" customClass="shenghuojia" customModule="EventBillBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8dH-Ip-7tW"/>
+                        <viewControllerLayoutGuide type="bottom" id="wk5-C8-zU0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LHl-BP-rl7">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYf-h5-QLF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XlX-XB-aaF" id="G36-5N-B9v"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="suU-a8-ICQ">
+                                <rect key="frame" x="177" y="267" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="suU-a8-ICQ" firstAttribute="centerY" secondItem="LHl-BP-rl7" secondAttribute="centerY" id="9RH-GB-stI"/>
+                            <constraint firstItem="suU-a8-ICQ" firstAttribute="centerX" secondItem="LHl-BP-rl7" secondAttribute="centerX" id="Feq-E7-fxM"/>
+                            <constraint firstItem="HYf-h5-QLF" firstAttribute="centerY" secondItem="LHl-BP-rl7" secondAttribute="centerY" id="JMT-Jr-P9e"/>
+                            <constraint firstItem="HYf-h5-QLF" firstAttribute="centerX" secondItem="LHl-BP-rl7" secondAttribute="centerX" id="JqK-RT-HmM"/>
+                            <constraint firstItem="HYf-h5-QLF" firstAttribute="width" secondItem="LHl-BP-rl7" secondAttribute="width" id="P90-xN-Pwu"/>
+                            <constraint firstItem="HYf-h5-QLF" firstAttribute="height" secondItem="LHl-BP-rl7" secondAttribute="height" id="bWQ-w8-jCV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="城市生活家" id="gis-5c-rZh"/>
+                    <connections>
+                        <outlet property="jiazai" destination="suU-a8-ICQ" id="t9X-4l-nud"/>
+                        <outlet property="webview" destination="HYf-h5-QLF" id="Ugk-DA-pGs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fma-QJ-RiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="3787"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="ewb-gc-xax">
+            <objects>
+                <navigationController id="HWO-9K-I3D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="首页" id="fOY-hV-nhQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dyw-Cb-5R1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P2Y-ul-KvR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ji4-eH-e0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="776.76161919040487"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OQZ-tY-rD5">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rDD-V1-r5j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="GJc-kZ-jh4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HWO-9K-I3D" kind="relationship" relationship="viewControllers" id="m4k-8x-cmf"/>
+                        <segue destination="Ke9-X0-l6C" kind="relationship" relationship="viewControllers" id="lxh-5b-12X"/>
+                        <segue destination="dnh-GX-2P8" kind="relationship" relationship="viewControllers" id="lRS-NV-qq8"/>
+                        <segue destination="ZEI-hH-yk9" kind="relationship" relationship="viewControllers" id="50x-Ph-EMZ"/>
+                        <segue destination="i83-3C-1Pm" kind="relationship" relationship="viewControllers" id="4Xf-aW-sP9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egm-nW-JWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="776.76161919040487"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="城事" width="30" height="30"/>
+        <image name="山居秘境" width="30" height="30"/>
+        <image name="生活家" width="30" height="30"/>
+        <image name="秘密花园" width="30" height="30"/>
+        <image name="首页" width="30" height="30"/>
+    </resources>
+</document>
