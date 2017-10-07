@@ -30,13 +30,18 @@ class shouye: UIViewController, UIWebViewDelegate {
         let request = URLRequest(url : myurl!)
         
         self.webView.loadRequest(request)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         webView.delegate = self
     }
     
-    
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
-        if request.url! != myurl {
+        let url = request.url?.absoluteString
+        
+        if request.url! != myurl && (url?.contains("mp.weixin.qq.com"))! || request.url! != myurl && (url?.contains("oss.site2e"))! {
             
             let vc = shouye()
             vc.myurl = request.url
