@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rDD-V1-r5j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rDD-V1-r5j">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ4-hP-Hxp">
@@ -28,9 +28,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Pz5-vW-ujU"/>
                                 </connections>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-j9-e5G">
-                                <rect key="frame" x="178" y="267" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zug-4x-2Bd">
+                                <rect key="frame" x="177" y="267" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,13 +37,12 @@
                             <constraint firstItem="JQ4-hP-Hxp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K8l-ZI-hzJ"/>
                             <constraint firstAttribute="trailing" secondItem="JQ4-hP-Hxp" secondAttribute="trailing" id="Qru-Zw-dxd"/>
                             <constraint firstItem="JQ4-hP-Hxp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TcF-p3-k7y"/>
+                            <constraint firstItem="zug-4x-2Bd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ig4-tx-dAh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JQ4-hP-Hxp" secondAttribute="bottom" id="rgE-xp-PuX"/>
+                            <constraint firstItem="zug-4x-2Bd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uDz-hm-Oxz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="最新活动" id="fVB-q9-D7B"/>
-                    <connections>
-                        <outlet property="jiazai" destination="ZEM-j9-e5G" id="vRA-zB-Qot"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,7 +54,7 @@
                 <navigationController id="Ke9-X0-l6C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="秘密花园" image="秘密花园" id="nNl-Gj-ACK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="C6M-f9-NjO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -76,7 +74,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Tcf-KI-9zI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OY0-bB-h3M">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5C-s4-UEp">
@@ -116,7 +114,7 @@
                 <navigationController id="dnh-GX-2P8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="山居秘境" image="山居秘境" id="TBm-Be-GIu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DMS-gG-bVN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -136,7 +134,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2Oc-YF-IJO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ieU-lc-3aQ">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqW-aC-3tU">
@@ -176,7 +174,7 @@
                 <navigationController id="ZEI-hH-yk9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="城事" image="城事" id="oSL-cT-zCB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Uc0-vB-fGB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -196,7 +194,7 @@
                         <viewControllerLayoutGuide type="bottom" id="t0K-oE-3gW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dux-CB-ilZ">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gnz-SZ-FbF">
@@ -240,7 +238,7 @@
                 <navigationController id="i83-3C-1Pm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="生活家" image="生活家" id="fYn-Vg-ZWr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Drm-Gi-833">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -260,7 +258,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wk5-C8-zU0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LHl-BP-rl7">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYf-h5-QLF">
@@ -301,7 +299,7 @@
                     <tabBarItem key="tabBarItem" title="首页" image="首页" id="fOY-hV-nhQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dyw-Cb-5R1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

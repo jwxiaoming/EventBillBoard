@@ -18,6 +18,9 @@ class shouye: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //获取标题
+        let title = webView.stringByEvaluatingJavaScript(from: "document.title") ?? "" as String
+        print("title:\(title)")
         
         webView = UIWebView(frame: self.view.bounds)
         webView.scrollView.showsVerticalScrollIndicator = false
@@ -25,7 +28,7 @@ class shouye: UIViewController, UIWebViewDelegate {
         webView.backgroundColor = UIColor.white
         self.view .addSubview(webView)
         if myurl == nil {
-            myurl = NSURL(string: "http://oss.site2e.cn/qbzshouye/index.html")! as URL
+            myurl = NSURL(string: "http://qbz.liruoming.xin")! as URL
         }
         let request = URLRequest(url : myurl!)
         
@@ -41,7 +44,7 @@ class shouye: UIViewController, UIWebViewDelegate {
         
         let url = request.url?.absoluteString
         
-        if request.url! != myurl && (url?.contains("mp.weixin.qq.com"))! || request.url! != myurl && (url?.contains("oss.site2e"))! {
+        if request.url! != myurl && (url?.contains("mp.weixin.qq.com"))! || request.url! != myurl && (url?.contains("whd"))! || request.url! != myurl && (url?.contains("kdy"))! || request.url! != myurl && (url?.contains("syc"))! || request.url! != myurl && (url?.contains("lbm"))! {
             
             let vc = shouye()
             vc.myurl = request.url
